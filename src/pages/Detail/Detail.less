@@ -1,0 +1,148 @@
+@import url('../../base.less');
+.page-detail {
+        // padding-bottom: 60px;
+
+        .loading {
+            padding: 10px 20px;
+            color: #444;
+            font-size: 18px;
+        }
+    .img-part {
+        position: relative;
+        font-size: 0;
+        img {
+            width: 100%;
+        }
+        h2 {
+            .font-cut();
+            position: absolute;
+            bottom: 0;
+            right:0;
+            left:0;
+            height: 40px;
+            line-height: 40px;
+            color: #fff;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 0 20px;
+            margin: 0;
+            font-size: 20px;
+            font-weight: normal;
+        }
+    }
+    .introduce-part {
+        background-color: #fff;
+        line-height: 40px;
+        padding: 10px;
+        .part-1 {
+            display: flex;
+            align-items: center;
+            .teacher {
+                flex:1
+            }
+            .btn {
+              .ui-btn();
+              line-height: 16px;
+            //   height: 12px;  
+                &.has-buy {
+                    background-color: #ddd;
+                    color: #444;
+                }
+            }
+        }
+        .part-2 {
+            .price{
+                color:#f30;
+                font-size: 20px;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .main {
+        background-color: #fff;
+        margin-top: 10px;
+        .nav {
+            text-align: center;
+            padding: 10px 0;
+            margin-bottom: 10px;
+            span {
+                display: inline-block;
+                padding: 10px;
+                font-size: 18px;
+                margin: 0 5px;
+                border: 3px solid transparent;
+                &.choose {
+                    border-bottom-color: #f30;
+                    color:#f30;
+                }
+            }
+        }
+        .content {
+            padding: 0 10px 30px;
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+                font-weight: normal;
+                font-size: 20px;
+                color:#f30;
+            }
+        }
+        li {
+            list-style: none;
+        }
+        ul,
+        li {
+            margin: 0;
+            padding: 0;
+        }
+        .library {
+            .item {
+                margin: 0 10px;
+                border-bottom:1px solid #ccc;
+                h3 {
+                    .arrow(10px,#000,right);
+                    font-weight: normal;
+                    font-size: 20px;
+                    height: 50px;
+                    line-height: 50px;
+                    margin: 0;
+                    // position: relative;
+                    display: flex;
+                    align-items: center;
+                    span {
+                        flex:1;
+                    }
+                    // &:after {
+                    //     position: absolute;
+                    //     right: 10px;
+                    //     top: 15px;
+                    // }
+                }
+                ul {
+                    display: none;
+                }
+                li {
+                    .ui-video(20px,#f30,rgba(0,0,0,0.5),10px,10px);
+                    height:40px;
+                    line-height: 40px;
+                    border-bottom: 1px dashed #ccc;
+                    padding-left: 10px;
+                    &:last-child {
+                        border-bottom: none;
+                    }
+                }
+                &.open {
+                    h3 {
+                        .arrow(10px, #000, bottom);
+                    }
+                    ul {
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,72 @@
+.font-cut {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.ui-btn(@c:#fff, @bg:#f30) {
+    background-color: @bg;
+    color:@c;
+    font-size: 12px;
+    padding: 4px 10px;
+    border-radius: 4px;
+    
+}
+
+
+.arrow(@w:10px,@c:#000,@dir:top) {
+    &:after {
+        content:'';
+        display: inline-block;
+        border-left: 2px solid @c;
+        border-top: 2px solid @c;
+        width: @w;
+        height: @w;
+    }
+}
+.arrow(@w,@c,@dir) when (@dir = top) {
+    &:after {
+        transform: rotate(45deg);
+    }
+}
+.arrow(@w,@c,@dir) when (@dir = left) {
+    &:after {
+        transform: rotate(-45deg);
+    }
+}
+.arrow(@w,@c,@dir) when (@dir = right) {
+    &:after {
+        transform: rotate(135deg);
+    }
+}
+.arrow(@w,@c,@dir) when (@dir = bottom) {
+    &:after {
+        transform: rotate(-135deg);
+    }
+}
+
+.ui-video(@w:20px,@c:#fff,@bg:rgba(0,0,0,0.5),@t:0,@r:0) {
+    @b:@w/10;
+    @s:@w/3;
+    position: relative;
+    &:before,
+    &:after {
+        content:"";
+        position: absolute;
+        right: @r;
+        top:@t;
+    }
+    &:before {
+        width:@w ;
+        height: @w;
+        border: @b solid @c;
+        background-color: @bg;
+        border-radius: 50%;
+        box-sizing: border-box;
+    }
+    //三角
+    &:after {
+        border:@s solid transparent;
+        border-left-color: @c;
+        top: @s + @s
+    }
+}

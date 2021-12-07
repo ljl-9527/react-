@@ -1,0 +1,36 @@
+@import url('../base.less');
+.ljl-card {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    margin: 20px;
+    background-color: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    img {
+        width: 100%;
+    }
+    h2 {
+        .font-cut();
+        padding: 0 20px;
+        font-size: 22px;
+        font-weight: normal;
+    }
+    .introduce {
+        display: flex;
+        padding: 0 10px 20px;
+        font-size: 14px;
+        align-items: center;
+        .sales{
+            flex:1
+        }
+        .price {
+            font-size: 18px;
+            color: #f30;
+            margin-right: 10px;
+        }
+        .button {
+            .ui-btn()
+        }
+    }
+}

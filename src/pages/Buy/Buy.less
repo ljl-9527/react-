@@ -1,0 +1,42 @@
+@import url('../../base.less');
+
+.page-buy {
+    .price-part {
+        background-color: #fff;
+        padding: 30px 20px;
+        font-size: 20px;
+        display: flex;
+        align-items: flex-end;
+        .price-num {
+            color:#f30;
+            font-size: 30px;
+            margin-left: 10px;
+        }
+    }
+    .btns-part {
+        padding-bottom: 20px;
+        margin-top: 40px;
+        text-align: center;
+        span {
+            .ui-btn();
+            margin: 0 10px;
+            &.cancel {
+                color: #333;
+                background-color: #ddd; 
+            }
+        }
+        
+    }
+    .buy-title {
+        padding: 0;
+        margin: 0;
+        background-color: #fff;
+        font-weight: normal;
+        font-size: 24px;
+        padding: 40px 20px 0;
+    }
+    .line {
+        height: 30px;
+        background-image: linear-gradient(#fff,#efefef);
+    }
+}
